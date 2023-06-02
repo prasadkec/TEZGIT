@@ -38,10 +38,10 @@
                             <a class="nav-link" href="cafeteria.aspx">Cafeteria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="meeting_room.html">Meeting Room</a>
+                            <a class="nav-link" href="MeetingRoom.aspx">Meeting Room</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stationery.html">Op</a>
+                            <a class="nav-link" href="stationery.html">Stationery Master</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="service_request.html">Service Request</a>

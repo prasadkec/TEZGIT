@@ -33,7 +33,7 @@
                             <a class="nav-link active" href="Cafeteria.aspx">Cafeteria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="meeting_room.html">Meeting Room</a>
+                            <a class="nav-link" href="MeetingRoom.aspx">Meeting Room</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="stationery.html">Stationery</a>

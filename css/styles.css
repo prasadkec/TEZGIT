@@ -1,0 +1,913 @@
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato/Lato-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("../fonts/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf");
+}
+body {
+    background: #fff;
+    overflow-x: hidden;
+    font-family: "Lato";
+}
+.banner-sec {
+    background-color: #ffffff;
+}
+.banner-sec .container {
+    height: 300px;
+}
+.banner-sec .container.cafeteria-bg {
+    background: url(../img/Cafeteria-01.png) no-repeat right bottom;
+    background-size: contain;
+}
+.banner-sec .container.stationery-bg {
+    background: url(../img/Stationery-04.png) no-repeat right bottom;
+    background-size: contain;
+}
+.banner-sec .container.meeting-room-bg {
+    background: url(../img/Meeting-Room.png) no-repeat right bottom;
+    background-size: contain;
+}
+.banner-sec .container.service-req-bg {
+    background: url(../img/Service-Request.png) no-repeat right bottom;
+    background-size: contain;
+}
+.master-banner {
+    height: 430px;
+    background: url(../img/Good_vibes_only.jpg) no-repeat center;
+    background-size: cover;
+}
+.banner-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 60px;
+    color: #221e1f;
+    font-family: "Playfair";
+}
+.cafe-header {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    z-index: 9;
+    padding: 20px 0px;
+}
+.product-sec {
+    background: #f8f8f8;
+    padding: 40px 0px;
+}
+.product-categories {
+    font-weight: 600;
+    margin-left: 10px;
+}
+.nav-pills.cafe-pill .nav-link {
+    width: 170px;
+}
+.nav-pills .nav-link {
+    color: #58595b;
+    font-size: 18px;
+    text-align: left;
+    padding: 5px 13px;
+    border-radius: 0px;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #3e0907;
+    background-color: #efc81f;
+}
+.product-list {
+    width: 100%;
+    margin-bottom: 40px;
+    font-family: "Roboto";
+}
+.product-img {
+    width: 100%;
+    height: 290px;
+    object-fit: contain;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+.product-name {
+    color: #000;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0px;
+    font-family: "Roboto Medium";
+}
+.product-qnty {
+    color: #58595b;
+    font-size: 1rem;
+    margin-bottom: 0px;
+    font-family: "Roboto";
+}
+.product-rate {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    font-family: "Roboto";
+}
+.add-product {
+    background: #d7f0db;
+    border: 1px solid #4dbc5c;
+    text-transform: uppercase;
+    color: #4dbc5c;
+    border-radius: 5px;
+    padding: 2px 16px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.check-statement {
+    background: #e6e7e8;
+    padding: 6px 16px;
+    border: none;
+    font-size: 17px;
+    color: #000;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+.check-statement i {
+    color: #efc81f;
+    font-size: 25px;
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+}
+.shopping-cart {
+    padding: 0px;
+    background: transparent;
+    color: #58595b;
+    border: none;
+}
+.shopping-cart i {
+    font-size: 35px;
+}
+.shopping-cart-badge {
+    background: #39b54a;
+    padding: 1px 6px;
+    font-size: 11px;
+    color: #fff;
+    border-radius: 100%;
+    right: -10px;
+    top: -6px;
+}
+.product-search input {
+    background: #fff;
+    border: none;
+    border-radius: 0px;
+    font-size: 17px;
+    color: #58595b;
+    padding: 6px 16px 6px 40px;
+    font-family: "Roboto";
+}
+.product-search input:focus {
+    box-shadow: none;
+}
+.product-search i {
+    position: absolute;
+    left: 10px;
+    font-size: 24px;
+    top: 5px;
+    color: #58595b;
+}
+.product-search.product-search-grey input
+{
+    background: #efefef;
+}
+.sec-table {
+    background: url(../img/dot-bg.png) no-repeat center;
+    background-size: cover;
+    padding: 70px 50px;
+}
+.master-tab {
+    background: url(../img/dot-bg.png) no-repeat center;
+    background-size: cover;
+    padding: 0px 50px 70px 50px;
+}
+.table-bg {
+    background: #fff;
+    padding: 25px;
+}
+.close-sec i {
+    color: #58595b;
+    font-size: 30px;
+    cursor: pointer;
+}
+.table-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 42px;
+    color: #221e1f;
+    font-family: "Playfair";
+}
+.sec-table table th,
+.sec-table table td {
+    color: #58595b;
+    font-size: 19px;
+    padding: 13px;
+    border-bottom: 1px solid #adadae !important;
+    border-right: 1px solid #adadae;
+}
+.sec-table table tr th:last-child,
+.sec-table table tr td:last-child {
+    border-right: 0px;
+}
+.sec-table table tr:last-child td {
+    border-bottom: 0px !important;
+}
+.sec-table table td div {
+    min-height: 30px;
+}
+.master-tab table th,
+.master-tab table td {
+    color: #58595b;
+    font-size: 19px;
+    padding: 13px;
+    border-bottom: 1px solid #adadae !important;
+    border-right: 1px solid #adadae;
+}
+.master-tab table tr th:last-child,
+.master-tab table tr td:last-child {
+    border-right: 0px;
+}
+.master-tab table tr:last-child td {
+    border-bottom: 0px !important;
+}
+.master-tab table td div {
+    min-height: 30px;
+}
+.date-picker input,
+.cafe-input,
+.cafe-select .ui-selectmenu-button.ui-button {
+    border: none;
+    border-bottom: 1px solid #adadae;
+    border-radius: 0;
+    padding: 10px 15px;
+    font-size: 19px;
+    color: #58595b;
+    font-weight: 500;
+    width: 100%;
+}
+.date-picker input:focus-visible,
+.cafe-input:focus-visible {
+    outline: none;
+}
+.date-picker i {
+    font-size: 22px;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    color: #58595b;
+}
+.cafe-btn {
+    color: #3e0907;
+    background-color: #efc81f;
+    border: none;
+    padding: 10px 15px;
+    width: 200px;
+    font-size: 19px;
+    font-weight: 500;
+    border-radius: 0px;
+    border: 1px solid transparent;
+}
+.cafe-btn:hover,
+.cafe-btn:focus {
+    color: #3e0907;
+    background-color: #fff;
+    border: 1px solid #efc81f;
+}
+.cafe-btn-grey {
+    background-color: #e6e7e8;
+}
+.cafe-btn-grey:hover,
+.cafe-btn-grey:focus {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.form-control:focus,
+.btn-primary:focus {
+    box-shadow: none;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    /* transition: 0.5s; */
+    padding-top: 60px;
+    z-index: 999;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #000000;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+.sidebaroverlay {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+}
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+.shopping-list {
+    width: 100%;
+    margin-bottom: 40px;
+    font-family: "Roboto";
+}
+.shopping-img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+.shopping-img img{
+    max-height: 100%;
+}
+.shopping-title {
+    margin-bottom: 30px;
+    font-size: 42px;
+    color: #221e1f;
+    font-family: "Roboto";
+}
+.shopping-items {
+    width: 100%;
+    padding: 0px 30px;
+}
+.meeting-room-list {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 2px 8px #ddd;
+    font-family: "Roboto";
+}
+.meeting-room-list .product-img img {
+    width: 100%;
+    height: 100%;
+}
+.meeting-room-list .product-img {
+    padding: 0px;
+}
+.book-now {
+    background: #d7f0db;
+    border: 1px solid #4dbc5c;
+    text-transform: uppercase;
+    color: #4dbc5c;
+    border-radius: 5px;
+    padding: 2px 16px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.book-btn {
+    width: initial;
+}
+.cafe-delete {
+    color: #ff735d;
+}
+.service-request {
+    color: #000;
+    font-size: 19px;
+    margin-bottom: 0px;
+    font-family: "Roboto";
+}
+.increment-input {
+    display: flex;
+    background: #00c046;
+    font-size: 13px;
+    width: 63px;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 2px 0px;
+}
+.increment-input input {
+    padding: 0px;
+    background: #00c046;
+    border: none;
+    color: #fff;
+    text-align: center;
+    pointer-events: none;
+    width: 35px;
+}
+.increment-input button {
+    background: #00c046;
+    border: none;
+    color: #fff;
+    padding: 0px 4px;
+}
+.cafe-label {
+    color: #58595b;
+    font-size: 19px;
+}
+.cafe-input-grey {
+    background: #e6e7e8;
+    border: none;
+    border-radius: 0;
+    font-size: 19px;
+    padding: 10px 15px;
+}
+.cafe-input-grey:focus {
+    background: #e6e7e8;
+}
+.datepicker.cafe-input-grey {
+    border-bottom: 0px;
+}
+.ui-timepicker-standard {
+    z-index: 99999 !important;
+    height: 110px !important;
+}
+.ui-timepicker,
+.ui-timepicker-viewport {
+    height: 102px;
+    border: none !important;
+}
+.time-picker i {
+    font-size: 22px;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    color: #58595b;
+}
+.cafe-select .ui-selectmenu-button.ui-button {
+    background: #fff;
+    padding: 13px 15px;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background: #efc81f;
+    border-color: transparent;
+    color: #212529;
+}
+.ui-selectmenu-menu .ui-widget.ui-widget-content {
+    background: #e6e7e8;
+    border: none;
+    font-size: 19px;
+    height: 100px;
+    margin-top: 2px;
+}
+.ui-selectmenu-menu .ui-widget.ui-widget-content::-webkit-scrollbar,.ui-timepicker-container .ui-timepicker-viewport::-webkit-scrollbar {
+    width: 5px;
+}
+.ui-selectmenu-menu .ui-widget.ui-widget-content::-webkit-scrollbar-track,.ui-timepicker-container .ui-timepicker-viewport::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #dedede;
+    border-radius: 10px;
+}
+.ui-selectmenu-menu .ui-widget.ui-widget-content::-webkit-scrollbar-thumb,.ui-timepicker-container .ui-timepicker-viewport::-webkit-scrollbar-thumb {
+    background: #bcbdbd;
+    border-radius: 10px;
+}
+.ui-selectmenu-menu .ui-widget.ui-widget-content::-webkit-scrollbar-thumb:hover,.ui-timepicker-container .ui-timepicker-viewport::-webkit-scrollbar-thumb:hover {
+    background: #bcbdbd;
+}
+.ui-timepicker-standard {
+    background: #e6e7e8;
+}
+.ui-timepicker-standard .ui-state-hover {
+    background: #efc81f;
+    border-color: transparent;
+    border-radius: 0;
+}
+.btn-close:focus {
+    box-shadow: none;
+}
+.cafe-select.cafe-select-grey .ui-selectmenu-button.ui-button {
+    background: #e6e7e8;
+    border-bottom: none;
+}
+.nav-tabs.main-tab {
+    border: none;
+    gap: 1.2%;
+    position: absolute;
+    top: -40px;
+    width: 100%;
+}
+.nav-tabs.main-tab .nav-link {
+    background: #dedfe0;
+    font-size: 19px;
+    color: #000;
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 15px;
+    text-align: center;
+    width: 165px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Medium";
+    margin-bottom: 10px;
+}
+.nav-tabs.main-tab .nav-item.show .nav-link,
+.nav-tabs.main-tab .nav-link.active {
+    background: #efc81f;
+}
+.tab-content.main-tab-content {
+    padding-top: 100px;
+}
+.nav-tabs.sub-tab {
+    border: none;
+    width: 100%;
+}
+.nav-tabs.sub-tab .nav-link {
+    background: #dedfe0;
+    font-size: 19px;
+    color: #000;
+    font-weight: 500;
+    border: none;
+    border-radius: 0px;
+    padding: 18px 15px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Medium";
+}
+.nav-tabs.sub-tab li.nav-item {
+    flex: 1 1 auto !important;
+}
+.nav-tabs.sub-tab .nav-item.show .nav-link,
+.nav-tabs.sub-tab .nav-link.active {
+    background: #efc81f;
+}
+.master-menu.navbar-light .navbar-nav .nav-link {
+    color: #414042;
+    font-size: 19px;
+    font-weight: 500;
+    margin-right: 15px;
+    padding: 3px 10px;
+    border: 1px solid transparent;
+    font-family: "Roboto";
+}
+.master-menu.navbar-light .navbar-nav .nav-link.active,
+.master-menu.navbar-light .navbar-nav .show > .nav-link {
+    border: 1px solid #efc81f;
+}
+.master-menu.navbar-light .navbar-nav .nav-link:hover {
+    border: 1px solid #efc81f;
+}
+.file.cafe-file {
+    position: relative;
+    display: flex;
+}
+.file.cafe-file > input[type="file"] {
+    display: none;
+}
+.file.cafe-file > label {
+    font-size: 19px;
+    font-weight: 300;
+    cursor: pointer;
+    outline: 0;
+    user-select: none;
+    border-color: #ff735d;
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 1px;
+    background-color: #ff735d;
+    color: #fff;
+    padding: 9px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+.file.cafe-file > label > i {
+    margin-left: 30px;
+    font-size: 25px;
+}
+.cafe-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 1px solid #f1d500;
+}
+.forgot-password {
+    color: #ff735d;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    font-weight: bold;
+}
+.form-check-input.cms-check {
+    border: 1px solid #1a2e35;
+}
+.form-check-input.cms-check:checked {
+    background-color: #1a2e35;
+    border: 1px solid #1a2e35;
+}
+.form-check-input.cms-check:focus {
+    box-shadow: none;
+    border-color: #1a2e35;
+}
+.modal .modal-content {
+    border-radius: 0px;
+}
+.cafe-popup-img {
+    position: absolute;
+    bottom: -72px;
+}
+.login-form {
+    position: relative;
+    padding-bottom: 250px;
+    z-index: 999;
+}
+.cafe-forgot-img {
+    position: absolute;
+    bottom: -36px;
+}
+.forgot-form {
+    position: relative;
+    padding-bottom: 315px;
+    z-index: 999;
+}
+.verify-form {
+    background: url(../img/VerifyPassword.png) no-repeat left bottom;
+    background-size: 30%;
+}
+.login-header {
+    position: absolute !important;
+    width: 100%;
+    background: transparent;
+    z-index: 9;
+    padding: 40px;
+}
+.master-menu.navbar-light.login-header .navbar-nav .nav-link {
+    color: #fff;
+    cursor: pointer;
+    font-family: "Roboto";
+}
+.cafe-carousel .carousel-caption {
+    top: 36%;
+    bottom: inherit;
+}
+.cafe-carousel .carousel-caption h1 {
+    border-bottom: 2px solid #efc81f;
+    width: max-content;
+    font-family: "Playfair";
+    font-size: 55px;
+    padding-bottom: 15px;
+    color: #fff;
+}
+.cafe-carousel .carousel-caption p {
+    font-size: 22px;
+    color: #fff;
+}
+.cafe-carousel .carousel-overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: none;
+}
+.master-menu.other-menu {
+    background: #f8f8f8;
+}
+.playfair-font {
+    font-family: "Playfair";
+}
+.workspace-sec {
+    color: #000;
+}
+.workspace-sec p {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+}
+.sidebar::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #525965;
+    border: 0px none #ffffff;
+    border-radius: 0px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #525965;
+}
+.sidebar::-webkit-scrollbar-thumb:active {
+    background: #525965;
+}
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+.sidebar::-webkit-scrollbar-track:hover {
+    background: transparent;
+}
+.sidebar::-webkit-scrollbar-track:active {
+    background: transparent;
+}
+.sidebar::-webkit-scrollbar-corner {
+    background: transparent;
+}
+.logo {
+    max-width: 100%;
+}
+.cafe-success.text-success
+{
+    color: #00c046 !important;
+}
+.cafe-doc-download div
+{
+    color:#efc81f !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.cafe-btn.download-btn
+{
+    border-color: #ff735d;
+    background-color: #ff735d;
+    color: #fff;
+    width: initial;
+}
+@media (max-width: 992px) {
+    .banner-title {
+        font-size: 40px;
+    }
+    .banner-sec .container.cafeteria-bg {
+        background-size: 40%;
+    }
+    .banner-sec .container.stationery-bg {
+        background-size: 40%;
+    }
+    .banner-sec .container.meeting-room-bg {
+        background-size: 35%;
+    }
+    .banner-sec .container.service-req-bg {
+        background-size: 40%;
+    }
+    .nav-tabs.main-tab .nav-link {
+        font-size: 16px;
+        padding: 15px 8px;
+        width: 100px;
+    }
+    .login-header {
+        position: relative !important;
+    }
+    .master-menu.navbar-light.login-header .navbar-nav .nav-link {
+        color: #414042;
+    }
+    .cafe-forgot-img,
+    .cafe-popup-img {
+        display: none;
+    }
+    .login-form,
+    .forgot-form {
+        padding-bottom: 30px;
+    }
+    .verify-form {
+        background: #fff;
+    }
+    .shopping-img img {
+        max-height: 100%;
+    }
+    .logo {
+        max-height: 50px;
+    }
+}
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 25px;
+    }
+    .banner-sec .container {
+        height: 200px;
+    }
+    .banner-sec .container.cafeteria-bg {
+        background-size: 40%;
+    }
+    .banner-sec .container.stationery-bg {
+        background-size: 40%;
+    }
+    .banner-sec .container.meeting-room-bg {
+        background-size: 40%;
+    }
+    .banner-sec .container.service-req-bg {
+        background-size: 40%;
+    }
+    .nav-tabs.main-tab .nav-link {
+        font-size: 12px;
+        padding: 15px 8px;
+        width: 80px;
+    }
+    .shopping-title {
+        font-size: 18px;
+    }
+    .sidebar .closebtn {
+        right: 0px;
+        top: -10px;
+    }
+}
+@media (max-width: 576px) {
+    .banner-title {
+        font-size: 40px;
+    }
+    .banner-sec .container.cafeteria-bg {
+        background: #fff;
+    }
+    .banner-sec .container.stationery-bg {
+        background: #fff;
+    }
+    .banner-sec .container.meeting-room-bg {
+        background: #fff;
+    }
+    .banner-sec .container.service-req-bg {
+        background: #fff;
+    }
+    .nav-tabs.sub-tab .nav-link {
+        font-size: 14px;
+        padding: 18px 5px;
+    }
+    .nav-tabs.main-tab .nav-link {
+        font-size: 12px;
+        padding: 10px;
+        width: inherit;
+        height: inherit;
+    }
+    .nav-tabs.main-tab {
+        position: relative;
+        top: 0;
+        height: inherit;
+        margin-top: 40px;
+    }
+    .tab-content.main-tab-content {
+        padding-top: 20px;
+    }
+}

@@ -25,7 +25,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                            <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="CafeteriaMaster.aspx">Masters</a>
                         </li>
                         <li class="nav-item">
@@ -35,7 +35,7 @@
                             <a class="nav-link" href="MeetingRoom.aspx">Meeting Room</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="stationery.html">Stationery</a>
+                            <a class="nav-link active" href="Stationery.aspx">Stationery</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="service_request.html">Service Request</a>

@@ -132,6 +132,7 @@
     <Content Include="MeetingRoom.aspx" />
     <Content Include="MeetingroomMaster.aspx" />
     <Content Include="ServiceRequestMaster.aspx" />
+    <Content Include="Stationery.aspx" />
     <Content Include="StationeryMaster.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -206,6 +207,13 @@
     </Compile>
     <Compile Include="ServiceRequestMaster.aspx.designer.cs">
       <DependentUpon>ServiceRequestMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery.aspx.cs">
+      <DependentUpon>Stationery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stationery.aspx.designer.cs">
+      <DependentUpon>Stationery.aspx</DependentUpon>
     </Compile>
     <Compile Include="StationeryMaster.aspx.cs">
       <DependentUpon>StationeryMaster.aspx</DependentUpon>

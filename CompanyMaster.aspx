@@ -1,16 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="CompanyMaster.aspx.cs" Inherits="TEZBI.CompanyMaster" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <script type="text/javascript">
+    <script type="text/javascript">
         function openpopup() {
             $("#myModal").modal('show');
         }
-        </script>
+    </script>
     <style type="text/css">
-        .Validationcolors
-        {
-            color:red;
+        .Validationcolors {
+            color: red;
         }
     </style>
     <section class="master-tab">
@@ -41,7 +41,8 @@
                                 <div class="row mt-5">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="mb-4">
-                                            <label class="form-label cafe-label">Company ID</label> <span class="Validationcolors">*</span>
+                                            <label class="form-label cafe-label">Company ID</label>
+                                            <span class="Validationcolors">*</span>
                                             <%--<input type="text" class="form-control cafe-input-grey" />--%>
                                             <asp:TextBox ID="txtCompanyId" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
                                         </div>
@@ -67,7 +68,7 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="mb-4">
                                             <label class="form-label cafe-label">Authorized Person</label><span class="Validationcolors">*</span>
-                                       <asp:TextBox ID="txtAuthorizedPerson" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
+                                            <asp:TextBox ID="txtAuthorizedPerson" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
                                         </div>
                                     </div>
                                     <%--<div class="col-lg-6 col-md-6 col-sm-6 col-12">
@@ -90,140 +91,38 @@
                                 <div class="row mt-5">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">Company ID</th>
-                                                        <th scope="col">Company Name</th>
-                                                        <th scope="col">Contact Person</th>
-                                                        <th scope="col">Contact Number</th>
-                                                        <th scope="col">Actions</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div>123</div>
-                                                        </td>
-                                                        <td class="cafe-doc-download" data-bs-toggle="modal" data-bs-target="#docDownloadModal">
-                                                            <div>XXX</div>
-                                                        </td>
-                                                        <td>
-                                                            <div>XXX</div>
-                                                        </td>
-                                                        <td>
-                                                            <div>98888 88888</div>
-                                                        </td>
-                                                        <td>
-                                                            <div><span>Edit</span>/<span>View</span>/<span class="cafe-delete">Delete</span></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                        <td>
-                                                            <div></div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                             <asp:GridView ID="GvCompanyMaster" runat="server" CssClass="table-responsive" 
+                                                AutoGenerateColumns="false" AllowPaging="true" AllowSorting="true" PageSize="10" Width="100%" GridLines="None">
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="CompanyId" HeaderStyle-ForeColor="black" HeaderStyle-Wrap="false" ItemStyle-Wrap="false">
+                                                        <ItemTemplate>
+                                                            <%#Eval("CompanyId") %>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Company Name" HeaderStyle-ForeColor="black" HeaderStyle-Wrap="false" ItemStyle-Wrap="false">
+                                                        <ItemTemplate>
+                                                            <%#Eval("CompanyName") %>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="EmailID" HeaderStyle-ForeColor="black" HeaderStyle-Wrap="false" ItemStyle-Wrap="false">
+                                                        <ItemTemplate>
+                                                            <%#Eval("CompanyEmailID") %>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Contact Number" HeaderStyle-ForeColor="black" HeaderStyle-Wrap="false" ItemStyle-Wrap="false">
+                                                        <ItemTemplate>
+                                                            <%#Eval("ContactNumber") %>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Authorized Person" HeaderStyle-ForeColor="black" HeaderStyle-Wrap="false" ItemStyle-Wrap="false">
+                                                        <ItemTemplate>
+                                                            <%#Eval("AuthorizedPerson") %>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                             </div>
                         </div>
@@ -231,27 +130,6 @@
                 </div>
             </div>
         </div>
+       
     </section>
-
-    <!-- Bootstrap -->
-<!-- Modal Popup -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    &times;</button>
-                <h4 class="modal-title">
-                </h4>
-            </div>
-            <div class="modal-body">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">
-                    Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 </asp:Content>

@@ -17,9 +17,35 @@ namespace TEZBI
         public static string message = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                BindCompanyMaster();
+            }
         }
+        public void BindCompanyMaster()
+        {
+            SqlCommand sqlcmd = new SqlCommand("sp_mst_viewcompany", con);
+            {
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+            }
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                GvCompanyMaster.DataSource = ds;
+                GvCompanyMaster.DataBind();
+            }
+            catch (Exception ex)
+            {
 
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             try

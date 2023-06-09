@@ -74,6 +74,9 @@
                         <a class="nav-link" href="CompanyMaster.aspx">Company Master</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="CompanyMaster.aspx">Company Documents</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="EmployeeMaster.aspx" >Employee Master</a>
                     </li>
                     <li class="nav-item">

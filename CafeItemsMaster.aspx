@@ -2,6 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">    
+
+        function Validate() {
+            var ItemDesc = document.getElementById("<%=txtItemName.ClientID%>").value;
+           
+            if (ItemDesc == '') {
+                alert("Please enter Item Name");
+                return false;
+            }           
+        }
+    </script>
      <section class="master-tab">
      <div class="tab-pane fade show active" >
                         <div class="table-bg pt-5">
@@ -29,21 +40,23 @@
                                         <div class="tab-pane fade show active" id="dataentry0" role="tabpanel" aria-labelledby="dataentry-tab">
                                             <div class="row mt-5">
                                                
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                                <%--<div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="mb-4">
                                                         <label class="form-label cafe-label">Item ID</label>
                                                         <input type="text" class="form-control cafe-input-grey" />
                                                     </div>
-                                                </div>
+                                                </div>--%>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="mb-4">
                                                         <label class="form-label cafe-label">Item Name</label>
-                                                        <input type="text" class="form-control cafe-input-grey" />
+                                                        <%--<input type="text" class="form-control cafe-input-grey" />--%>
+                                                        <asp:TextBox ID="txtItemName" runat="server" CssClass="form-control"></asp:TextBox>
                                                     </div>
                                                 </div>
                                              
-                                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center mt-5">
-                                                    <button type="submit" class="btn btn-primary cafe-btn me-0 me-lg-3 mb-2">SUBMIT</button>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center mt-5">                                                   
+                                                   <asp:Button ID="btnSubmit" runat="server" Text="SUBMIT" CssClass="btn btn-primary cafe-btn me-0 me-lg-3 mb-2"
+                                            OnClientClick="javascript:return Validate();" OnClick="btnSubmit_Click" />
                                                 </div>
                                             </div>
                                         </div>

@@ -1,0 +1,13 @@
+6/13/2023 2:22:56 PM
+-------------------START-------------
+Page :CafeteriaMaster.aspx
+Procedure or function 'Sp_Mst_CreateCafeteria' expects parameter '@FileName', which was not supplied.
+6/13/2023 2:22:56 PM
+-------------------END-------------
+
+6/13/2023 2:26:00 PM
+Date and Time
+Page :CafeteriaMaster.aspx
+Procedure or function 'Sp_Mst_CreateCafeteria' expects parameter '@Status', which was not supplied.
+6/13/2023 2:26:00 PM
+-------------------END-------------

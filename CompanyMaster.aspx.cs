@@ -46,7 +46,7 @@ namespace TEZBI
             }
             catch (Exception ex)
             {
-
+                logerrors(ex.Message);
             }
             finally
             {

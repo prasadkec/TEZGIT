@@ -2,6 +2,37 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">    
+
+        function Validate() {
+            var Category = document.getElementById("<%=ddlCategory.ClientID%>").value;
+            var Name = document.getElementById("<%=txtName.ClientID%>").value;
+            var Price = document.getElementById("<%=txtPrice.ClientID%>").value;
+            var Quantity = document.getElementById("<%=txtQuantity.ClientID%>").value;
+            var Weightage = document.getElementById("<%=txtWeightage.ClientID%>").value;
+                     
+            if (Category.value  == '') {
+                alert("Please select Category");
+                return false;
+            }
+            if (Name == '') {
+                alert("Please enter Name");
+                return false;
+            }
+            if (Price == '') {
+                alert("Please enter Price");
+                return false;
+            }
+            if (Quantity == '') {
+                alert("Please enter Quantity");
+                return false;
+            }
+            if (Weightage == '') {
+                alert("Please enter Weightage");
+                return false;
+            }
+        }
+    </script>
     <section class="master-tab">
          <div class="tab-pane" >
                         <div class="table-bg pt-5">
@@ -32,25 +63,33 @@
                                                     <div class="mb-4">
                                                         <label class="form-label cafe-label">Cafe List*</label>
                                                         <div class="position-relative cafe-select cafe-select-grey">
-                                                            <select name="select-menu" class="form-select select-menu">
-                                                                <option selected="selected">Select</option>
-                                                                <option>Paperboat</option>
-                                                                <option>Soft Drinks</option>
-                                                                <option>Refer Excel Sheet-Cafe Menu</option>
-                                                            </select>
+                                                            <asp:DropDownList ID="ddlCategory" runat="server" CssClass="form-select select-menu">                                                                
+                                                            </asp:DropDownList>                                                            
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="mb-4">
-                                                        <label class="form-label cafe-label">Menu*</label>
-                                                        <input type="text" class="form-control cafe-input-grey" />
+                                                        <label class="form-label cafe-label">Name*</label>
+                                                         <asp:TextBox ID="txtName" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="mb-4">
                                                         <label class="form-label cafe-label">Price*</label>
-                                                        <input type="text" class="form-control cafe-input-grey" />
+                                                        <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="mb-4">
+                                                        <label class="form-label cafe-label">Quantity*</label>
+                                                         <asp:TextBox ID="txtQuantity" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="mb-4">
+                                                        <label class="form-label cafe-label">Weightage*</label>
+                                                         <asp:TextBox ID="txtWeightage" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
@@ -63,8 +102,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center mt-5">
-                                                    <button type="submit" class="btn btn-primary cafe-btn me-0 me-lg-3 mb-2">SUBMIT</button>
-                                                    <button type="submit" class="btn btn-primary cafe-btn cafe-btn-grey mb-2">BULK UPLOAD</button>
+                                                    <asp:Button ID="btnSubmit" runat="server" Text="SUBMIT" CssClass="btn btn-primary cafe-btn me-0 me-lg-3 mb-2"
+                                            OnClientClick="javascript:return Validate();" OnClick="btnSubmit_Click" />                                                 
                                                 </div>
                                             </div>
                                         </div>

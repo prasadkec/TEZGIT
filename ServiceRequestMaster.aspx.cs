@@ -30,7 +30,7 @@ namespace TEZBI
                 command.Parameters.AddWithValue("@ServiceType", ddlServiceRequest.SelectedValue);
                 command.Parameters.AddWithValue("@ServiceIssue", txtServiceIssue.Text);
             
-                command.Parameters.AddWithValue("@CreatedBy", "ilayaraja");
+                command.Parameters.AddWithValue("@CreatedBy", Session["Username"]);
                 command.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 command.Parameters["@ERROR"].Direction = ParameterDirection.Output;
 
@@ -117,7 +117,7 @@ namespace TEZBI
                 SqlCommand cmdDelete = new SqlCommand("Sp_Mst_DeleteServiceRequest", con);
                 cmdDelete.CommandType = CommandType.StoredProcedure;
                 cmdDelete.Parameters.AddWithValue("@Id", Id);
-                cmdDelete.Parameters.AddWithValue("@ModifiedBy", "ilayaraja");
+                cmdDelete.Parameters.AddWithValue("@ModifiedBy", Session["Username"]);
                 cmdDelete.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmdDelete.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 con.Open();

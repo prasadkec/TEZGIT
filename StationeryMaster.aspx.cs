@@ -65,7 +65,7 @@ namespace TEZBI
 
                 }
                 cmd.Parameters.AddWithValue("@FileSize", 1235);
-                cmd.Parameters.AddWithValue("@CreatedBy", "Murali");
+                cmd.Parameters.AddWithValue("@CreatedBy", Session["Username"]);
                 cmd.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmd.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 cmd.ExecuteNonQuery();
@@ -146,7 +146,7 @@ namespace TEZBI
                 SqlCommand cmdDelete = new SqlCommand("Sp_Mst_DeleteStationery", con);
                 cmdDelete.CommandType = CommandType.StoredProcedure;
                 cmdDelete.Parameters.AddWithValue("@Id", Id);
-                cmdDelete.Parameters.AddWithValue("@ModifiedBy", "ilayaraja");
+                cmdDelete.Parameters.AddWithValue("@ModifiedBy", Session["Username"]);
                 cmdDelete.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmdDelete.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 con.Open();

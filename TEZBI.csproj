@@ -133,7 +133,6 @@
     <Content Include="fonts\Roboto\LICENSE.txt" />
     <Content Include="ForgetPassword.aspx" />
     <Content Include="guestregistration.aspx" />
-    <Content Include="images006.jpg" />
     <Content Include="img\001.jpg" />
     <Content Include="img\002.jpg" />
     <Content Include="img\003.jpg" />

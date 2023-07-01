@@ -202,7 +202,7 @@ namespace TEZBI
                 cmd.Parameters.AddWithValue("@Quantity", ddlincredecre.SelectedValue);
                 cmd.Parameters.AddWithValue("@Weightage", lblWeight.Text);
                 cmd.Parameters.AddWithValue("@Cart", "Y");
-                cmd.Parameters.AddWithValue("@CreatedBy", "Murali");
+                cmd.Parameters.AddWithValue("@CreatedBy", Session["Username"]);
                 cmd.ExecuteNonQuery();
 
 

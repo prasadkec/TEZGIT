@@ -139,7 +139,7 @@ namespace TEZBI
             
 
                 cmd.Parameters.AddWithValue("@FileSize", 1235);
-                cmd.Parameters.AddWithValue("@CreatedBy", "ilayaraja");
+                cmd.Parameters.AddWithValue("@CreatedBy", Session["Username"]);
                 cmd.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmd.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 cmd.ExecuteNonQuery();
@@ -278,7 +278,7 @@ namespace TEZBI
 
                 cmd.Parameters.AddWithValue("@Quantity", Quantity.Text);
                 cmd.Parameters.AddWithValue("@Weightage", Weightage.Text);
-                cmd.Parameters.AddWithValue("@ModifiedBy", "Murali");
+                cmd.Parameters.AddWithValue("@ModifiedBy", Session["Username"]);
                 cmd.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmd.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 cmd.ExecuteNonQuery();

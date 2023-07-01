@@ -70,6 +70,7 @@ body {
 }
 .nav-pills.cafe-pill .nav-link {
     width: 170px;
+	    padding-left: 5px;
 }
 .nav-pills .nav-link {
     color: #58595b;
@@ -194,6 +195,11 @@ body {
     background-size: cover;
     padding: 70px 50px;
 }
+.sec-table1 {
+    background: url(../img/dot-bg.png) no-repeat center;
+    background-size: cover;
+    padding: 70px 50px;
+}
 .master-tab {
     background: url(../img/dot-bg.png) no-repeat center;
     background-size: cover;
@@ -215,22 +221,22 @@ body {
     color: #221e1f;
     font-family: "Playfair";
 }
-.sec-table table th,
-.sec-table table td {
+.sec-table1 table th,
+.sec-table1 table td {
     color: #58595b;
     font-size: 19px;
     padding: 13px;
     border-bottom: 1px solid #adadae !important;
     border-right: 1px solid #adadae;
 }
-.sec-table table tr th:last-child,
-.sec-table table tr td:last-child {
+.sec-table1 table tr th:last-child,
+.sec-table1 table tr td:last-child {
     border-right: 0px;
 }
-.sec-table table tr:last-child td {
+.sec-table1 table tr:last-child td {
     border-bottom: 0px !important;
 }
-.sec-table table td div {
+.sec-table1 table td div {
     min-height: 30px;
 }
 .master-tab table th,
@@ -419,7 +425,7 @@ body {
     text-transform: uppercase;
     color: #4dbc5c;
     border-radius: 5px;
-    padding: 2px 16px;
+    padding: 2px 5px;
     font-size: 13px;
     font-weight: 500;
 }

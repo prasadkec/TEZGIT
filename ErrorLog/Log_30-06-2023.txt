@@ -1,0 +1,307 @@
+30-06-2023 09:41:27
+-------------------START-------------
+Page :CafeteriaMaster.aspx
+Procedure or function 'Sp_Mst_UpdateCafeteria' expects parameter '@ItemCode', which was not supplied.
+30-06-2023 09:41:27
+-------------------END-------------
+
+30-06-2023 09:58:02
+Date and Time
+Page :cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 09:58:02
+-------------------END-------------
+30-06-2023 09:58:37
+Date and Time
+Page :cafeteriastatement.aspx
+Input string was not in a correct format.
+30-06-2023 09:58:37
+-------------------END-------------
+30-06-2023 10:04:21
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:04:21
+-------------------END-------------
+30-06-2023 10:04:24
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:04:24
+-------------------END-------------
+30-06-2023 10:04:52
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:04:52
+-------------------END-------------
+30-06-2023 10:04:58
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:04:58
+-------------------END-------------
+30-06-2023 10:05:21
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:05:21
+-------------------END-------------
+30-06-2023 10:06:11
+Date and Time
+Page :cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:06:11
+-------------------END-------------
+30-06-2023 10:07:57
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:07:57
+-------------------END-------------
+30-06-2023 10:08:42
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:08:42
+-------------------END-------------
+30-06-2023 10:10:32
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:10:32
+-------------------END-------------
+30-06-2023 10:10:37
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:10:37
+-------------------END-------------
+30-06-2023 10:10:59
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:10:59
+-------------------END-------------
+30-06-2023 10:16:08
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:16:08
+-------------------END-------------
+30-06-2023 10:16:14
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 10:16:14
+-------------------END-------------
+30-06-2023 10:50:52
+Date and Time
+Page :AddCafeItems.aspx
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'EmployeeId'.
+30-06-2023 10:50:52
+-------------------END-------------
+30-06-2023 10:53:03
+Date and Time
+Page :AddCafeItems.aspx
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'EmployeeId'.
+30-06-2023 10:53:03
+-------------------END-------------
+30-06-2023 10:53:51
+Date and Time
+Page :AddCafeItems.aspx
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'EmployeeId'.
+30-06-2023 10:53:51
+-------------------END-------------
+30-06-2023 11:11:43
+Date and Time
+Page :cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:11:43
+-------------------END-------------
+30-06-2023 11:25:18
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:25:18
+-------------------END-------------
+30-06-2023 11:26:56
+Date and Time
+Page :cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:26:56
+-------------------END-------------
+30-06-2023 11:39:54
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:39:54
+-------------------END-------------
+30-06-2023 11:40:09
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:40:09
+-------------------END-------------
+30-06-2023 11:41:18
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:41:18
+-------------------END-------------
+30-06-2023 11:41:27
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:41:27
+-------------------END-------------
+30-06-2023 11:41:50
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:41:50
+-------------------END-------------
+30-06-2023 11:45:36
+Date and Time
+Page :cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:45:36
+-------------------END-------------
+30-06-2023 11:46:29
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:46:29
+-------------------END-------------
+30-06-2023 11:48:04
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 11:48:04
+-------------------END-------------
+30-06-2023 12:04:21
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 12:04:21
+-------------------END-------------
+30-06-2023 12:04:28
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 12:04:28
+-------------------END-------------
+30-06-2023 12:05:26
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 12:05:26
+-------------------END-------------
+30-06-2023 12:05:40
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 12:05:40
+-------------------END-------------
+30-06-2023 12:07:26
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 12:07:26
+-------------------END-------------
+30-06-2023 12:51:07
+Date and Time
+Page :CafeteriaMaster.aspx
+Error converting data type nvarchar to int.
+30-06-2023 12:51:07
+-------------------END-------------
+30-06-2023 12:52:02
+Date and Time
+Page :cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 12:52:02
+-------------------END-------------
+30-06-2023 12:56:49
+Date and Time
+Page :cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 12:56:49
+-------------------END-------------
+30-06-2023 15:58:46
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 15:58:46
+-------------------END-------------
+30-06-2023 16:05:01
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 16:05:01
+-------------------END-------------
+30-06-2023 16:51:58
+Date and Time
+Page :CafeteriaMaster.aspx
+The ConnectionString property has not been initialized.
+30-06-2023 16:51:58
+-------------------END-------------
+30-06-2023 16:56:20
+Date and Time
+Page :CafeteriaMaster.aspx
+The ConnectionString property has not been initialized.
+30-06-2023 16:56:20
+-------------------END-------------
+30-06-2023 16:59:18
+Date and Time
+Page :CafeteriaMaster.aspx
+The ConnectionString property has not been initialized.
+30-06-2023 16:59:18
+-------------------END-------------
+30-06-2023 17:01:08
+Date and Time
+Page :CafeteriaMaster.aspx
+The ConnectionString property has not been initialized.
+30-06-2023 17:01:08
+-------------------END-------------
+30-06-2023 17:39:19
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 17:39:19
+-------------------END-------------
+30-06-2023 17:50:10
+Date and Time
+Page :CafeteriaMaster.aspx
+Error converting data type nvarchar to int.
+30-06-2023 17:50:10
+-------------------END-------------
+30-06-2023 17:50:39
+Date and Time
+Page :CafeteriaMaster.aspx
+Error converting data type nvarchar to int.
+30-06-2023 17:50:39
+-------------------END-------------
+30-06-2023 17:51:14
+Date and Time
+Page :CafeteriaMaster.aspx
+Error converting data type nvarchar to int.
+30-06-2023 17:51:14
+-------------------END-------------
+30-06-2023 17:52:17
+Date and Time
+Page :CafeteriaMaster.aspx
+Error converting data type nvarchar to int.
+30-06-2023 17:52:17
+-------------------END-------------
+30-06-2023 20:49:31
+Date and Time
+Page :cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 20:49:31
+-------------------END-------------
+30-06-2023 20:49:38
+Date and Time
+Page :Cafeteria.aspx
+Object cannot be cast from DBNull to other types.
+30-06-2023 20:49:38
+-------------------END-------------

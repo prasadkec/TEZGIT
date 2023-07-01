@@ -3,7 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <script type="text/javascript">    
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+    <%--  <script type="text/javascript">    
 
         function Validate() {
             var CompanyId = document.getElementById("<%=txtCompanyId.ClientID%>").value;
@@ -40,7 +43,7 @@
         function EValidate() {
             var CompanyName = document.getElementById("<%=CompanyName.ClientID%>").value;
             var EmailId = document.getElementById("<%=EmailId.ClientID%>").value;
-           
+
             var ContactNo = document.getElementById("<%=ContactNo.ClientID%>").value;
             var AuthorizedPerson = document.getElementById("<%=AuthorizedPerson.ClientID%>").value;
 
@@ -52,7 +55,7 @@
             if (EmailId == '') {
                 alert("Please enter EmailId");
                 return false;
-            }                      
+            }
 
             if (ContactNo == '') {
                 alert("Please enter ContactNo");
@@ -77,7 +80,7 @@
             color: black;
             background: yellow;
         }
-    </style>
+    </style>--%>
     <section class="master-tab">
         <div class="tab-pane fade show active">
             <div class="table-bg pt-5">
@@ -93,47 +96,48 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-12 m-auto">
                         <ul class="nav nav-tabs sub-tab">
                             <li class="nav-item">
-                                <a class="nav-link active" id="data-entry-tab1" data-bs-toggle="tab" href="#dataentry1" role="tab" aria-controls="dataentry1" aria-selected="true">Data Entry</a>
+                                <a class="nav-link active" id="transaction-tab1" data-bs-toggle="tab" href="#transaction1" role="tab" aria-controls="transaction1" aria-selected="false">View Details</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="transaction-tab1" data-bs-toggle="tab" href="#transaction1" role="tab" aria-controls="transaction1" aria-selected="false">Transaction Details</a>
+                                <a class="nav-link " id="data-entry-tab1" data-bs-toggle="tab" href="#dataentry1" role="tab" aria-controls="dataentry1" aria-selected="true">Data Entry</a>
                             </li>
+                            
                         </ul>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="tab-content sub-tab-content">
-                            <div class="tab-pane fade show active" id="dataentry1" role="tabpanel" aria-labelledby="dataentry-tab1">
+                            <div class="tab-pane fade" id="dataentry1" role="tabpanel" aria-labelledby="dataentry-tab1">
                                 <div class="row mt-5">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="mb-4">
-                                            <label class="form-label cafe-label">Company ID</label>
-                                            <span class="Validationcolors">*</span>
-                                            <%--<input type="text" class="form-control cafe-input-grey" />--%>
-                                            <asp:TextBox ID="txtCompanyId" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
+                                            <label class="form-label cafe-label">Company Name</label><span class="Validationcolors">*</span>
+                                            <asp:TextBox ID="txtCompanyName" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rfvCompNamed" runat="server" ControlToValidate="txtCompanyName" Text="Company Name is required." CssClass="text-danger"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="mb-4">
                                             <label class="form-label cafe-label">Company Email ID</label><span class="Validationcolors">*</span>
                                             <asp:TextBox ID="txtEmailId" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rfvEmailidd" runat="server" ControlToValidate="txtEmailId" Text="E-Mail ID required." CssClass="text-danger"></asp:RequiredFieldValidator>
+                                            <asp:RegularExpressionValidator ID="revEmailidd" runat="server" ControlToValidate="txtEmailId" ErrorMessage="Invalid Email ID format." ValidationExpression="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" CssClass="text-danger"></asp:RegularExpressionValidator>
+
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <div class="mb-4">
-                                            <label class="form-label cafe-label">Company Name</label><span class="Validationcolors">*</span>
-                                            <asp:TextBox ID="txtCompanyName" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
-                                        </div>
-                                    </div>
+
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="mb-4">
                                             <label class="form-label cafe-label">Contact Number</label><span class="Validationcolors">*</span>
                                             <asp:TextBox ID="txtContactNo" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rfvcontnumbd" runat="server" ControlToValidate="txtContactNo" Text="Contact Number required." CssClass="text-danger"></asp:RequiredFieldValidator>
+                                            <asp:RegularExpressionValidator ID="revcontnumbd" runat="server" ControlToValidate="txtContactNo" ErrorMessage="Contact Number should be 10 digits." ValidationExpression="^\d{10}$" CssClass="text-danger"></asp:RegularExpressionValidator>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="mb-4">
                                             <label class="form-label cafe-label">Authorized Person</label><span class="Validationcolors">*</span>
                                             <asp:TextBox ID="txtAuthorizedPerson" runat="server" CssClass="form-control cafe-input-grey"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rfvauthpersond" runat="server" ControlToValidate="txtAuthorizedPerson" Text="AuthorizedPerson required." CssClass="text-danger"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <%--<div class="col-lg-6 col-md-6 col-sm-6 col-12">
@@ -147,15 +151,16 @@
                                     </div>--%>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center mt-5">
                                         <%--<button type="submit" class="btn btn-primary cafe-btn me-0 me-lg-3 mb-2">SUBMIT</button>--%>
-                                        <asp:Button ID="btnSubmit" runat="server" Text="SUBMIT" CssClass="btn btn-primary cafe-btn me-0 me-lg-3 mb-2"
-                                            OnClientClick="javascript:return Validate();" OnClick="btnSubmit_Click" />
-                                        <button type="submit" class="btn btn-primary cafe-btn cafe-btn-grey mb-2">BULK UPLOAD</button>
-                                        <asp:Button ID="btnDocument" runat="server" Text="DOCUMENT UPLOAD" CssClass="btn btn-primary cafe-btn me-0 me-lg-3 mb-2" />
+
+
+                                        <asp:Button ID="btnSubmit" runat="server" Text="SUBMIT" CssClass="btn btn-primary cafe-btn me-0 me-lg-3 mb-2" OnClick="btnSubmit_Click" />
+
+
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="transaction1" role="tabpanel" aria-labelledby="transaction-tab1">
+                            <div class="tab-pane fade  show active" id="transaction1" role="tabpanel" aria-labelledby="transaction-tab1">
                                 <div class="row mt-5">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="table-responsive">
@@ -222,9 +227,10 @@
                     </div>
                     <div class="modal-body">
                         <div class="row mb-12">
-                             <div class="col-md-12">
+                            <div class="col-md-12">
                                 <b>
-                                    <label>Company Name </label><span class="Validationcolors">*</span>
+                                    <label>Company Name </label>
+                                    <span class="Validationcolors">*</span>
                                     <asp:TextBox ID="CompanyName" runat="server" CssClass="form-control" TabIndex="2" Placeholder="Company Name" Width="100%"></asp:TextBox>
                                 </b>
                             </div>
@@ -233,31 +239,102 @@
                                     <label>Company Email ID</label><span class="Validationcolors">*</span>
                                     <asp:TextBox ID="EmailId" runat="server" CssClass="form-control" TabIndex="1" Placeholder="Company Email ID" Width="100%"></asp:TextBox>
                                 </b>
-                            </div>                           
+                            </div>
                             <div class="col-md-12">
                                 <b>
-                                    <label>Contact Number </label><span class="Validationcolors">*</span>
+                                    <label>Contact Number </label>
+                                    <span class="Validationcolors">*</span>
                                     <asp:TextBox ID="ContactNo" runat="server" CssClass="form-control" TabIndex="3" Placeholder="Contact Number" Width="100%"></asp:TextBox>
                                 </b>
                             </div>
                             <div class="col-md-12">
                                 <b>
-                                    <label>Authorized Person </label><span class="Validationcolors">*</span>
+                                    <label>Authorized Person </label>
+                                    <span class="Validationcolors">*</span>
                                     <asp:TextBox ID="AuthorizedPerson" runat="server" CssClass="form-control" TabIndex="4" Placeholder="Authorized Person" Width="100%"></asp:TextBox>
                                 </b>
                             </div>
-                           
+
                         </div>
                     </div>
                     <div class="modal-footer" style="background-image: linear-gradient(to right,#f6d538 0,#f6d538 100%); color: #FFFFFF">
-                        <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary" OnClientClick="javascript:return EValidate();" 
-                            OnClick="btnUpdate_Click" CausesValidation="true" ValidationGroup="Update"></asp:Button>                        
+                        <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary" OnClientClick="javascript:return EValidate();"
+                            OnClick="btnUpdate_Click" CausesValidation="true" ValidationGroup="Update"></asp:Button>
                         <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-danger" />
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+        <div class="modal" id="companyaddsuccessModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="successLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <asp:Button ID="closebutton" runat="server" CssClass="btn-close"  />
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12 col-sm-12 col-12 m-auto text-center mb-5">
+                                <h4 class="cafe-success text-success">Company Added Successfully!!!</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="errorLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <asp:Button ID="closebuttonerror" runat="server" CssClass="btn-close"  />
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-10 col-md-12 col-sm-12 col-12 m-auto text-center mb-5">
+                            <h4 class="cafe-error text-danger" id="errorLabel">Company already Exists</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="updatecompanysuccessModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="errorLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <asp:Button ID="btnupdatecompanysuccessModal" runat="server" CssClass="btn-close"  />
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-10 col-md-12 col-sm-12 col-12 m-auto text-center mb-5">
+                            <h4 class="cafe-success text-success" id="updatesuccessLabel">Company Updated Successfully</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="deletecompanysuccessModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="errorLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <asp:Button ID="btndeletesuccess" runat="server" CssClass="btn-close" OnClientClick="location.reload();" />
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-10 col-md-12 col-sm-12 col-12 m-auto text-center mb-5">
+                            <h4 class="cafe-success text-success" id="deletesuccessLabel">Company Deleted Successfully</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+
     <!-- Essential javascripts for application to work-->
     <script src="jss/jquery-3.3.1.min.js"></script>
     <script src="jss/popper.min.js"></script>
@@ -266,4 +343,36 @@
     <!-- The javascript plugin to display page loading on top-->
     <script src="jss/plugins/pace.min.js"></script>
     <!-- Page specific javascripts-->
+
+
+    <!-- POPUP script-->
+
+
+    <script>
+        function showModal(type, message) {
+            if (type === 'success') {
+                // Show success modal
+                $('#companyaddsuccessModal').modal('show');
+            } else if (type === 'error') {
+                // Show error modal with message
+                $('#errorModal .modal-body').text(message);
+                $('#errorModal').modal('show');
+            }
+            else if (type === 'updatecompanysuccess') {
+                // Show success modal
+                $('#updatecompanysuccessModal').modal('show');
+            }
+            else if (type === 'deletecompanysuccess') {
+                // Show success modal
+                $('#deletecompanysuccessModal').modal('show');
+            }
+
+        }
+
+
+
+    </script>
+
+            </ContentTemplate>
+        </asp:UpdatePanel>
 </asp:Content>

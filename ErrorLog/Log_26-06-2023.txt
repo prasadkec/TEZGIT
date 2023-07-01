@@ -1,0 +1,25 @@
+26-06-2023 16:26:54
+-------------------START-------------
+Page :CafeteriaMaster.aspx
+File format you uploaded is not supported
+26-06-2023 16:26:54
+-------------------END-------------
+
+26-06-2023 16:26:55
+Date and Time
+Page :CafeteriaMaster.aspx
+Procedure or function 'Sp_Mst_CreateCafeteria' expects parameter '@FileName', which was not supplied.
+26-06-2023 16:26:55
+-------------------END-------------
+26-06-2023 16:27:21
+Date and Time
+Page :CafeteriaMaster.aspx
+The column "ItemCode" cannot be modified because it is either a computed column or is the result of a UNION operator.
+26-06-2023 16:27:21
+-------------------END-------------
+26-06-2023 16:28:36
+Date and Time
+Page :CafeteriaMaster.aspx
+The column "ItemCode" cannot be modified because it is either a computed column or is the result of a UNION operator.
+26-06-2023 16:28:36
+-------------------END-------------

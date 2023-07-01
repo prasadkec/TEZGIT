@@ -15,22 +15,22 @@ namespace TEZBI
     {
 
         /// <summary>
-        /// txtCompanyId control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCompanyId;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// txtEmailId control.
+        /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmailId;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
         /// txtCompanyName control.
@@ -42,6 +42,42 @@ namespace TEZBI
         protected global::System.Web.UI.WebControls.TextBox txtCompanyName;
 
         /// <summary>
+        /// rfvCompNamed control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCompNamed;
+
+        /// <summary>
+        /// txtEmailId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmailId;
+
+        /// <summary>
+        /// rfvEmailidd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmailidd;
+
+        /// <summary>
+        /// revEmailidd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmailidd;
+
+        /// <summary>
         /// txtContactNo control.
         /// </summary>
         /// <remarks>
@@ -49,6 +85,24 @@ namespace TEZBI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContactNo;
+
+        /// <summary>
+        /// rfvcontnumbd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcontnumbd;
+
+        /// <summary>
+        /// revcontnumbd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revcontnumbd;
 
         /// <summary>
         /// txtAuthorizedPerson control.
@@ -60,6 +114,15 @@ namespace TEZBI
         protected global::System.Web.UI.WebControls.TextBox txtAuthorizedPerson;
 
         /// <summary>
+        /// rfvauthpersond control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvauthpersond;
+
+        /// <summary>
         /// btnSubmit control.
         /// </summary>
         /// <remarks>
@@ -67,15 +130,6 @@ namespace TEZBI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
-
-        /// <summary>
-        /// btnDocument control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDocument;
 
         /// <summary>
         /// txtSearch control.
@@ -148,5 +202,41 @@ namespace TEZBI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
+
+        /// <summary>
+        /// closebutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button closebutton;
+
+        /// <summary>
+        /// closebuttonerror control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button closebuttonerror;
+
+        /// <summary>
+        /// btnupdatecompanysuccessModal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnupdatecompanysuccessModal;
+
+        /// <summary>
+        /// btndeletesuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btndeletesuccess;
     }
 }

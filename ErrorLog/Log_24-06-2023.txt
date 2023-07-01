@@ -1,0 +1,25 @@
+24-06-2023 13:21:56
+-------------------START-------------
+Page :CafeteriaMaster.aspx
+File format you uploaded is not supported
+24-06-2023 13:21:56
+-------------------END-------------
+
+24-06-2023 13:21:56
+Date and Time
+Page :CafeteriaMaster.aspx
+Procedure or function 'Sp_Mst_CreateCafeteria' expects parameter '@FileName', which was not supplied.
+24-06-2023 13:21:56
+-------------------END-------------
+24-06-2023 13:22:11
+Date and Time
+Page :CafeteriaMaster.aspx
+File format you uploaded is not supported
+24-06-2023 13:22:11
+-------------------END-------------
+24-06-2023 13:22:11
+Date and Time
+Page :CafeteriaMaster.aspx
+Procedure or function 'Sp_Mst_CreateCafeteria' expects parameter '@FileName', which was not supplied.
+24-06-2023 13:22:11
+-------------------END-------------

@@ -11,8 +11,17 @@ namespace TEZBI
 {
 
 
-    public partial class CafeItemsMaster
+    public partial class AddCafeItems
     {
+
+        /// <summary>
+        /// btnredirect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnredirect;
 
         /// <summary>
         /// txtItemName control.
@@ -31,5 +40,23 @@ namespace TEZBI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+
+        /// <summary>
+        /// GvCafeItemsMaster control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GvCafeItemsMaster;
+
+        /// <summary>
+        /// closebutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button closebutton;
     }
 }

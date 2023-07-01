@@ -60,7 +60,6 @@ namespace TEZBI
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Sp_Mst_CreateCompany", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@CompanyId", txtCompanyId.Text);
                 cmd.Parameters.AddWithValue("@CompanyName", txtCompanyName.Text);
                 cmd.Parameters.AddWithValue("@CompanyEMailID", txtEmailId.Text);
                 cmd.Parameters.AddWithValue("@AuthorizedPerson", txtAuthorizedPerson.Text);
@@ -70,8 +69,31 @@ namespace TEZBI
                 cmd.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 cmd.ExecuteNonQuery();
                 message = (string)cmd.Parameters["@ERROR"].Value;
-                //Response.Write("<script>alert('" + message + "');window.location ='CompanyMaster.aspx';</script>");
-                ScriptManager.RegisterStartupScript(this, GetType(), "msg", "<script language='javascript'>alert('Added Successfully!!');window.location ='CompanyMaster.aspx';</script>", false);
+
+                string statusMessage = (string)cmd.Parameters["@ERROR"].Value;
+
+                if (statusMessage.Contains("Added Successfully"))
+                {
+
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showSuccessModal", "<script language='javascript'>showModal('success');</script>", false);
+                }
+
+
+                //string statusMessage = (string)cmd.Parameters["@ERROR"].Value;
+
+                //if (statusMessage.Contains("Added Successfully"))
+                //{
+                //    ScriptManager.RegisterStartupScript(this, GetType(), "showcompanyaddsuccessModal", "<script language='javascript'>showModal('success');</script>", false);
+
+
+                //}
+                else if (statusMessage.Contains("Already Exists"))
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showerrorModal", "<script language='javascript'>showModal('error');</script>", false);
+
+                }
+
+
             }
             catch (Exception ex)
             {
@@ -147,7 +169,7 @@ namespace TEZBI
                             CompanyName.Text = dr["CompanyName"].ToString();
                             EmailId.Text = dr["CompanyEmailID"].ToString();
                             ContactNo.Text = dr["ContactNumber"].ToString();
-                            AuthorizedPerson.Text = dr["AuthorizedPerson"].ToString();                            
+                            AuthorizedPerson.Text = dr["AuthorizedPerson"].ToString();
                         }
                         dr.Close();
                     }
@@ -188,8 +210,18 @@ namespace TEZBI
                 cmd.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmd.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 cmd.ExecuteNonQuery();
-                message = (string)cmd.Parameters["@ERROR"].Value;               
-                ScriptManager.RegisterStartupScript(this, GetType(), "msg", "<script language='javascript'>alert('Updated Successfully!!');window.location ='CompanyMaster.aspx';</script>", false);
+                message = (string)cmd.Parameters["@ERROR"].Value;
+
+                string statusMessage = (string)cmd.Parameters["@ERROR"].Value;
+
+                if (statusMessage.Contains("Updated Successfully"))
+                {
+                  
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showupdatecompanysuccessModal", "<script language='javascript'>showModal('updatecompanysuccess');</script>", false);
+
+
+                }
+
             }
             catch (Exception ex)
             {
@@ -198,7 +230,7 @@ namespace TEZBI
             finally
             {
                 con.Close();
-            }            
+            }
         }
 
         protected void GvCompanyMaster_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -209,7 +241,7 @@ namespace TEZBI
                 SqlCommand cmdDelete = new SqlCommand("Sp_Mst_DeleteCompany", con);
                 cmdDelete.CommandType = CommandType.StoredProcedure;
                 cmdDelete.Parameters.AddWithValue("@CompanyId", CompanyId);
-                cmdDelete.Parameters.AddWithValue("@ModifiedBy", "ilayaraja");                
+                cmdDelete.Parameters.AddWithValue("@ModifiedBy", "ilayaraja");
                 cmdDelete.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmdDelete.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 con.Open();
@@ -218,7 +250,15 @@ namespace TEZBI
                 cmdDelete.Dispose();
                 if (k != 0)
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Msg", "<script language='javascript'>alert('Deleted Succesfully');window.location ='CompanyMaster.aspx';</script>", false);
+
+                    string statusMessage = (string)cmdDelete.Parameters["@ERROR"].Value;
+
+                    if (statusMessage.Contains("Deleted Successfully"))
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "showdeletecompanysuccessModal", "<script language='javascript'>showModal('deletecompanysuccess');</script>", false);
+                    }
+
+
                     return;
                 }
             }
@@ -228,7 +268,7 @@ namespace TEZBI
             }
             finally
             {
-                
+
                 con.Close();
             }
         }

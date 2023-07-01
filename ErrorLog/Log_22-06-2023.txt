@@ -1,0 +1,67 @@
+22-06-2023 10:19:13
+-------------------START-------------
+Page :StationeryMaster.aspx
+File format you uploaded is not supported
+22-06-2023 10:19:13
+-------------------END-------------
+
+22-06-2023 10:19:13
+Date and Time
+Page :StationeryMaster.aspx
+Procedure or function 'Sp_Mst_CreateStationery' expects parameter '@Id', which was not supplied.
+22-06-2023 10:19:13
+-------------------END-------------
+22-06-2023 10:19:59
+Date and Time
+Page :StationeryMaster.aspx
+File format you uploaded is not supported
+22-06-2023 10:20:00
+-------------------END-------------
+22-06-2023 10:20:23
+Date and Time
+Page :StationeryMaster.aspx
+Procedure or function 'Sp_Mst_CreateStationery' expects parameter '@Id', which was not supplied.
+22-06-2023 10:20:23
+-------------------END-------------
+22-06-2023 14:02:46
+Date and Time
+Page :CafeteriaMaster.aspx
+File format you uploaded is not supported
+22-06-2023 14:02:46
+-------------------END-------------
+22-06-2023 14:02:46
+Date and Time
+Page :CafeteriaMaster.aspx
+Procedure or function 'Sp_Mst_CreateCafeteria' expects parameter '@FileName', which was not supplied.
+22-06-2023 14:02:46
+-------------------END-------------
+22-06-2023 14:56:58
+Date and Time
+Page :EmployeeMaster.aspx
+Procedure or function 'Sp_Mst_CreateEmployee' expects parameter '@Username', which was not supplied.
+22-06-2023 14:56:58
+-------------------END-------------
+22-06-2023 16:16:33
+Date and Time
+Page :EmployeeMaster.aspx
+Procedure or function 'Sp_Mst_CreateEmployee' expects parameter '@EmployeeType', which was not supplied.
+22-06-2023 16:16:33
+-------------------END-------------
+22-06-2023 16:19:04
+Date and Time
+Page :EmployeeMaster.aspx
+Procedure or function 'Sp_Mst_UpdateEmployee' expects parameter '@EmployeeType', which was not supplied.
+22-06-2023 16:19:04
+-------------------END-------------
+22-06-2023 16:19:17
+Date and Time
+Page :EmployeeMaster.aspx
+Procedure or function 'Sp_Mst_UpdateEmployee' expects parameter '@EmployeeType', which was not supplied.
+22-06-2023 16:19:17
+-------------------END-------------
+22-06-2023 16:19:22
+Date and Time
+Page :EmployeeMaster.aspx
+Procedure or function 'Sp_Mst_UpdateEmployee' expects parameter '@EmployeeType', which was not supplied.
+22-06-2023 16:19:22
+-------------------END-------------

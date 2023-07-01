@@ -13,7 +13,7 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="loginform" runat="server">
+    <form id="loginform" runat="server" autocomplete="off">
         <section>
             <div class="row mb-5 mt-5">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12 px-5">

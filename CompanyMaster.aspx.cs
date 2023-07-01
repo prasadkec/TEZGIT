@@ -64,7 +64,7 @@ namespace TEZBI
                 cmd.Parameters.AddWithValue("@CompanyEMailID", txtEmailId.Text);
                 cmd.Parameters.AddWithValue("@AuthorizedPerson", txtAuthorizedPerson.Text);
                 cmd.Parameters.AddWithValue("@ContactNumber", txtContactNo.Text);
-                cmd.Parameters.AddWithValue("@CreatedBy", "ilayaraja");
+                cmd.Parameters.AddWithValue("@CreatedBy", Session["Username"]);
                 cmd.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmd.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 cmd.ExecuteNonQuery();
@@ -206,7 +206,7 @@ namespace TEZBI
                 cmd.Parameters.AddWithValue("@CompanyEMailID", EmailId.Text);
                 cmd.Parameters.AddWithValue("@AuthorizedPerson", AuthorizedPerson.Text);
                 cmd.Parameters.AddWithValue("@ContactNumber", ContactNo.Text);
-                cmd.Parameters.AddWithValue("@ModifiedBy", "ilayaraja");
+                cmd.Parameters.AddWithValue("@ModifiedBy", Session["Username"]);
                 cmd.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmd.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 cmd.ExecuteNonQuery();
@@ -241,7 +241,7 @@ namespace TEZBI
                 SqlCommand cmdDelete = new SqlCommand("Sp_Mst_DeleteCompany", con);
                 cmdDelete.CommandType = CommandType.StoredProcedure;
                 cmdDelete.Parameters.AddWithValue("@CompanyId", CompanyId);
-                cmdDelete.Parameters.AddWithValue("@ModifiedBy", "ilayaraja");
+                cmdDelete.Parameters.AddWithValue("@ModifiedBy", Session["Username"]);
                 cmdDelete.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmdDelete.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 con.Open();

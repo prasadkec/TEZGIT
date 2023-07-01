@@ -26,7 +26,7 @@
 
 </head>
 <body>
-    <form id="Form1" runat="server">
+    <form id="Form1" runat="server" autocomplete="off">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="upd" runat="server">
             <ContentTemplate>
@@ -101,14 +101,14 @@
 
                                 <asp:ListView ID="ListView1" runat="server">
                                     <LayoutTemplate>
-                                            <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
+                                        <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
                                     </LayoutTemplate>
                                     <ItemTemplate>
-                                            <asp:Label ID="lblNoDataFound" runat="server" ForeColor="Black" Text="No records found" Visible="false"></asp:Label>
-                                            <asp:LinkButton ID="lnkItemDesc" runat="server" Text='<%# Eval("ItemDesc")%>' CommandArgument='<%# Eval("itemcode")%>' CssClass="nav-link light-text cafenav " Style="text-decoration: none !important;" OnClick="lnkItemDesc_Click"></asp:LinkButton>
+                                        <asp:Label ID="lblNoDataFound" runat="server" ForeColor="Black" Text="No records found" Visible="false"></asp:Label>
+                                        <asp:LinkButton ID="lnkItemDesc" runat="server" Text='<%# Eval("ItemDesc")%>' CommandArgument='<%# Eval("itemcode")%>' CssClass="nav-link light-text cafenav " Style="text-decoration: none !important;" OnClick="lnkItemDesc_Click"></asp:LinkButton>
                                     </ItemTemplate>
                                     <AlternatingItemTemplate>
-                                            <asp:LinkButton ID="lnkItemDesc" runat="server" Text='<%# Eval("ItemDesc")%>' CommandArgument='<%# Eval("ItemCode")%>' CssClass="nav-link light-text cafenav " Style="text-decoration: none !important;" OnClick="lnkItemDesc_Click"></asp:LinkButton>
+                                        <asp:LinkButton ID="lnkItemDesc" runat="server" Text='<%# Eval("ItemDesc")%>' CommandArgument='<%# Eval("ItemCode")%>' CssClass="nav-link light-text cafenav " Style="text-decoration: none !important;" OnClick="lnkItemDesc_Click"></asp:LinkButton>
                                     </AlternatingItemTemplate>
                                     <EmptyDataTemplate>
                                     </EmptyDataTemplate>
@@ -117,7 +117,7 @@
                             </div>
                             <div class="tab-content flex-fill">
 
-                                <div class="tab-pane fade active show" >
+                                <div class="tab-pane fade active show">
                                     <div class="row 1">
                                         <asp:ListView ID="LstItems" runat="server" GroupItemCount="10" OnItemDataBound="LstItems_ItemDataBound" GroupPlaceholderID="groupPlaceHolder1"
                                             ItemPlaceholderID="itemPlaceHolder1">
@@ -128,38 +128,38 @@
                                             </LayoutTemplate>
                                             <GroupTemplate>
                                                 <div class="row 2">
-                                                <asp:PlaceHolder runat="server" ID="itemPlaceHolder1"></asp:PlaceHolder>
+                                                    <asp:PlaceHolder runat="server" ID="itemPlaceHolder1"></asp:PlaceHolder>
                                                 </div>
                                             </GroupTemplate>
                                             <ItemTemplate>
                                                 <%--<div class="tab-content flex-fill" >--%>
-                                                    
-                                                            <asp:Panel ID="myDiv" CssClass="col-lg-4 col-md-6 col-sm-3 col-3" runat="server">
-                                                                <div class="product-list">
-                                                                    <div class="product-img">
-                                                                        <asp:Label ID="lblimage" runat="server" Text='<%#Eval("ItemFilePath")%>' Visible="false"></asp:Label>
-                                                                        <asp:Image ID="Image1" runat="server" CssClass="app-sidebar__user-avatar" src='<%#Eval("ItemFilePath")%>' Style="height: auto; max-width: 80%;" />
-                                                                    </div>
-                                                                    <div class="row mt-2">
-                                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-8">
-                                                                            <asp:Label ID="lblQuantity" runat="server" Text='<%#Eval("Quantity")%>' Visible="false"></asp:Label>
-                                                                            <asp:Label ID="lblitemtype" runat="server" Text='<%#Eval("itemtype")%>' Visible="false"></asp:Label>
-                                                                            <asp:Label ID="lblitemcode" runat="server" Text='<%#Eval("itemcode")%>' Visible="false"></asp:Label>
-                                                                            <p class="product-name">
-                                                                                <asp:Label ID="lblName" runat="server" Text='<%#Eval("itemdesc")%>'></asp:Label>
-                                                                            </p>
-                                                                            <p class="product-qnty">
-                                                                                <asp:Label ID="lblWeight" runat="server" Text='<%#Eval("weightage")%>'></asp:Label>
-                                                                            </p>
-                                                                        </div>
-                                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-end">
-                                                                            <p class="product-rate">Rs.<asp:Label ID="lblPrice" runat="server" Text='<%#Eval("Price")%>'></asp:Label></p>
 
-                                                                            <%--<button class="decrebtn">-</button>
+                                                <asp:Panel ID="myDiv" CssClass="col-lg-4 col-md-6 col-sm-3 col-3" runat="server">
+                                                    <div class="product-list">
+                                                        <div class="product-img">
+                                                            <asp:Label ID="lblimage" runat="server" Text='<%#Eval("ItemFilePath")%>' Visible="false"></asp:Label>
+                                                            <asp:Image ID="Image1" runat="server" CssClass="app-sidebar__user-avatar" src='<%#Eval("ItemFilePath")%>' Style="height: auto; max-width: 80%;" />
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-lg-8 col-md-8 col-sm-8 col-8">
+                                                                <asp:Label ID="lblQuantity" runat="server" Text='<%#Eval("Quantity")%>' Visible="false"></asp:Label>
+                                                                <asp:Label ID="lblitemtype" runat="server" Text='<%#Eval("itemtype")%>' Visible="false"></asp:Label>
+                                                                <asp:Label ID="lblitemcode" runat="server" Text='<%#Eval("itemcode")%>' Visible="false"></asp:Label>
+                                                                <p class="product-name">
+                                                                    <asp:Label ID="lblName" runat="server" Text='<%#Eval("itemdesc")%>'></asp:Label>
+                                                                </p>
+                                                                <p class="product-qnty">
+                                                                    <asp:Label ID="lblWeight" runat="server" Text='<%#Eval("weightage")%>'></asp:Label>
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-end">
+                                                                <p class="product-rate">Rs.<asp:Label ID="lblPrice" runat="server" Text='<%#Eval("Price")%>'></asp:Label></p>
+
+                                                                <%--<button class="decrebtn">-</button>
                                                                     <input class="incrementCounter" type="text" value="1" min="1">
                                                                     <button class="increbtn">+</button>--%>
-                                                                            <asp:DropDownList ID="ddlincredecre" runat="server" Width="43px" Style="border-radius: 5px;">
-                                                                                <%--<asp:ListItem Value="1" Text="1"></asp:ListItem>
+                                                                <asp:DropDownList ID="ddlincredecre" runat="server" Width="43px" Style="border-radius: 5px;">
+                                                                    <%--<asp:ListItem Value="1" Text="1"></asp:ListItem>
                                                                         <asp:ListItem Value="2" Text="2"></asp:ListItem>
                                                                         <asp:ListItem Value="3" Text="3"></asp:ListItem>
                                                                         <asp:ListItem Value="4" Text="4"></asp:ListItem>
@@ -174,17 +174,17 @@
                                                                         <asp:ListItem Value="13" Text="13"></asp:ListItem>
                                                                         <asp:ListItem Value="14" Text="14"></asp:ListItem>
                                                                         <asp:ListItem Value="15" Text="15"></asp:ListItem>--%>
-                                                                            </asp:DropDownList>
+                                                                </asp:DropDownList>
 
-                                                                            <div>
-                                                                                <asp:Button ID="btnAddCart" runat="server" Text="Add" CssClass="book-now mt-3" OnClick="btnAddCart_Click" />
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                <div>
+                                                                    <asp:Button ID="btnAddCart" runat="server" Text="Add" CssClass="book-now mt-3" OnClick="btnAddCart_Click" />
                                                                 </div>
-                                                            </asp:Panel>
-                                          
-                                                    <%--</div>--%>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </asp:Panel>
+
+                                                <%--</div>--%>
                                             </ItemTemplate>
                                             <EmptyDataTemplate>
                                                 <asp:Label ID="lblRecord" runat="server" Text="No Data Found" Font-Size="Larger"></asp:Label>

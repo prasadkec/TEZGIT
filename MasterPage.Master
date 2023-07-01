@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" autocomplete="off">
         <div>
              <nav class="navbar navbar-expand-lg navbar-light cafe-header position-relative master-menu">
             <div class="container">

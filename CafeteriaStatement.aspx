@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    <form id="Form1" runat="server">
+    <form id="Form1" runat="server" autocomplete="off">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="upd" runat="server">
             <ContentTemplate>

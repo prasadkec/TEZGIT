@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-    <form id="loginform" runat="server">
+    <form id="loginform" runat="server" autocomplete="off">
          <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="upd" runat="server">
             <ContentTemplate>

@@ -111,10 +111,9 @@ namespace TEZBI
                 command.Parameters.AddWithValue("@EmployeeName", txtEmpName.Text);
                 command.Parameters.AddWithValue("@EmailID", txtEmpID.Text);
                 command.Parameters.AddWithValue("@ContactNumber", txtContactNumber.Text);
-                command.Parameters.AddWithValue("@AuthorizedPerson", txtAuthorizedperson.Text);
-                command.Parameters.AddWithValue("@Username", GenerateRandomValue(8));
+                command.Parameters.AddWithValue("@AuthorizedPerson", txtAuthorizedperson.Text);                
                 command.Parameters.AddWithValue("@Password", GenerateRandomValue(8));
-                command.Parameters.AddWithValue("@CreatedBy", "ilayaraja");
+                command.Parameters.AddWithValue("@CreatedBy", Session["Username"]);
                 command.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 command.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 command.ExecuteNonQuery();
@@ -254,7 +253,7 @@ namespace TEZBI
                 
                 cmd.Parameters.AddWithValue("@AuthorizedPerson", AuthorizedPerson.Text);
                 cmd.Parameters.AddWithValue("@ContactNumber", ContactNumber.Text);
-                cmd.Parameters.AddWithValue("@ModifiedBy", "Murali");
+                cmd.Parameters.AddWithValue("@ModifiedBy", Session["Username"]);
                 cmd.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmd.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 cmd.ExecuteNonQuery();
@@ -287,7 +286,7 @@ namespace TEZBI
                 SqlCommand cmdDelete = new SqlCommand("Sp_Mst_DeleteEmployee", con);
                 cmdDelete.CommandType = CommandType.StoredProcedure;
                 cmdDelete.Parameters.AddWithValue("@EmployeeId", EmployeeId);
-                cmdDelete.Parameters.AddWithValue("@ModifiedBy", "ilayaraja");
+                cmdDelete.Parameters.AddWithValue("@ModifiedBy", Session["Username"]);
                 cmdDelete.Parameters.Add("@ERROR", SqlDbType.Char, 500);
                 cmdDelete.Parameters["@ERROR"].Direction = ParameterDirection.Output;
                 con.Open();

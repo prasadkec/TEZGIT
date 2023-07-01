@@ -72,14 +72,12 @@ namespace TEZBI
                 employeeType = employeeTypeParam.Value.ToString();
             }
             con.Close();
-
             if (employeeType == "Admin")
             {
                 Session["Username"] = username;
-                Session["EmployeeType"] = employeeType;
-
-                Response.Redirect("CafeteriaMaster.aspx");
-            }
+                Session["EmployeeType"] = "Administrator";
+                Response.Redirect("CompanyMaster.aspx");
+            }            
             else if (employeeType == "Employee")
             {
                 Session["Username"] = username;

@@ -52,7 +52,7 @@
                                                     <label cssclass="form-label cafe-label">Select Company*</label>
                                                     <div class="position-relative cafe-select cafe-select-grey">
                                                         <asp:DropDownList ID="ddlCompanyName" runat="server" CssClass="form-select select-menu">
-                                                            <asp:ListItem Text="Choose Company From Masters" Value=""></asp:ListItem>
+                                                            <asp:ListItem Text="Choose Company From Masters" Value="0"></asp:ListItem>
                                                         </asp:DropDownList>
                                                          <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" InitialValue="0" ControlToValidate="ddlCompanyName" Text="Select Company" CssClass="text-danger"></asp:RequiredFieldValidator>
                                                

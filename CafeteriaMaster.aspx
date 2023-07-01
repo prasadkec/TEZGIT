@@ -56,7 +56,7 @@
                                 <h1 class="table-title">Cafeteria Master</h1>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-end close-sec">
-                                <asp:Button ID="btnredirect" runat="server" CssClass="btn btn-primary" Text="Add Cafe Items" OnClick="btnredirect_Click" />
+                                <asp:Button ID="btnredirect" runat="server" CssClass="btn btn-primary" CausesValidation="false" Text="Add Cafe Items" OnClick="btnredirect_Click" />
                             </div>
                         </div>
                         <div class="row mt-4">

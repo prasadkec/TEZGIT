@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -49,46 +51,82 @@ namespace TEZBI
             //    passwordCookie.Expires = DateTime.Now.AddDays(90); // Set the cookie expiration date (e.g., 30 days from now)
             //    Response.Cookies.Add(passwordCookie);
             //}
-            
 
-
-            string username = txtUserName.Text;
-            string password = txtPassword.Text;
-            string employeeType = "";
-
-            con.Open();
-            using (SqlCommand command = new SqlCommand("Sp_Mst_ValidateLogin", con))
+            DataSet ds = new DataSet();
+            SqlDataAdapter adp = new SqlDataAdapter();
+            string UserName = string.Empty;
+            string EmployeeType = string.Empty;
+            try
             {
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@Username", username);
-                command.Parameters.AddWithValue("@Password", password);
+                SqlCommand cmd = new SqlCommand("Sp_Mst_ValidateLogin", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Username", txtUserName.Text.Trim());
+                cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+                adp.SelectCommand = cmd;
+                adp.Fill(ds);
+                cmd.Dispose();
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    UserName = ds.Tables[0].Rows[0]["Username"].ToString();
+                    EmployeeType = ds.Tables[0].Rows[0]["EmployeeType"].ToString();
 
-                SqlParameter employeeTypeParam = new SqlParameter("@EmployeeType", SqlDbType.VarChar, 20);
-                employeeTypeParam.Direction = ParameterDirection.Output;
-                command.Parameters.Add(employeeTypeParam);
+                    if (EmployeeType == "Admin")
+                    {
+                        Session["Username"] = UserName;
+                        Session["EmployeeType"] = "Administrator";
+                        Response.Redirect("CompanyMaster.aspx");
+                    }
+                    else if (EmployeeType == "Employee")
+                    {
+                        Session["Username"] = UserName;
+                        Session["EmployeeType"] = EmployeeType;
 
-                command.ExecuteNonQuery();
-
-                employeeType = employeeTypeParam.Value.ToString();
+                        Response.Redirect("Cafeteria.aspx");
+                    }
+                    else
+                    {
+                     //popup
+                    }
+                }
             }
-            con.Close();
-            if (employeeType == "Admin")
+            catch(Exception Ex)
             {
-                Session["Username"] = username;
-                Session["EmployeeType"] = "Administrator";
-                Response.Redirect("CompanyMaster.aspx");
-            }            
-            else if (employeeType == "Employee")
+                logerrors(ex.Message);
+            }
+            finally
             {
-                Session["Username"] = username;
-                Session["EmployeeType"] = employeeType;
+                con.Close();
+            }
+        }
 
-                Response.Redirect("Cafeteria.aspx");
+        public void logerrors(string error)
+        {
+            string pageName = Path.GetFileName(Request.Path);
+            string filename = "Log_" + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
+            string filepath = Server.MapPath("~/ErrorLog/" + filename);
+            if (File.Exists(filepath))
+            {
+                using (StreamWriter stwriter = new StreamWriter(filepath, true))
+                {
+                    stwriter.WriteLine(DateTime.Now);
+                    stwriter.WriteLine("Date and Time");
+                    stwriter.WriteLine("Page :" + pageName);
+                    stwriter.WriteLine(error);
+                    stwriter.WriteLine(DateTime.Now);
+                    stwriter.WriteLine("-------------------END-------------");
+                }
             }
             else
             {
-
-                //lblErrorMessage.Text = "Invalid credentials. Please try again.";
+                StreamWriter stwriter = File.CreateText(filepath);
+                stwriter.WriteLine(DateTime.Now);
+                stwriter.WriteLine("-------------------START-------------");
+                stwriter.WriteLine("Page :" + pageName);
+                stwriter.WriteLine(error);
+                stwriter.WriteLine(DateTime.Now);
+                stwriter.WriteLine("-------------------END-------------");
+                stwriter.WriteLine("");
+                stwriter.Close();
             }
         }
     }

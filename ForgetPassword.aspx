@@ -47,7 +47,7 @@
                                     <div class="col-lg-5 col-md-12 col-sm-12 col-12 m-auto">
                                         <div class="mb-4">
                                             <asp:TextBox ID="txtUsername" runat="server" autocomplete="off" CssClass="form-control cafe-input-grey" Placeholder="Enter Your UserName" Width="100%"></asp:TextBox>
-
+                                            <asp:RequiredFieldValidator ID="Req_txtUserName" runat="server" ControlToValidate="txtUserName" CssClass="text-danger" ErrorMessage="UserName required."></asp:RequiredFieldValidator>
                                         </div>
                                        
 

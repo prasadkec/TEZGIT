@@ -169,7 +169,8 @@
                                                     <div class="product-search product-search-grey float-end position-relative me-3">
                                                         <i class="fa fa-search"></i>
                                                         <%--<input class="form-control" type="text" placeholder="Search Master..." />--%>
-                                                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" placeholder="Search..." AutoPostBack="true" OnTextChanged="txtSearch_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" CausesValidation="false" placeholder="Search..." AutoPostBack="true" OnTextChanged="txtSearch_TextChanged"></asp:TextBox>
+                                                        <%--<asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-primary cafe-btn me-0 me-lg-3 mb-2" OnClick="btnSearch_Click" />--%>
                                                     </div>
                                                 </div>
                                             </div>
@@ -272,7 +273,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header border-0">
-                        <asp:Button ID="closebutton" runat="server" CssClass="btn-close"  />
+                        <asp:Button ID="closebutton" runat="server" CssClass="btn-close" OnClick="closebutton_Click" />
                     </div>
                     <div class="modal-body">
                         <div class="row">
@@ -337,9 +338,9 @@
 
     <!-- Essential javascripts for application to work-->
     <script src="jss/jquery-3.3.1.min.js"></script>
-    <script src="jss/popper.min.js"></script>
-    <script src="jss/bootstrap.min.js"></script>
-    <script src="jss/main.js"></script>
+   <%-- <script src="jss/popper.min.js"></script>--%>
+   <%-- <script src="jss/bootstrap.min.js"></script>--%>
+  <%--  <script src="jss/main.js"></script>--%>
     <!-- The javascript plugin to display page loading on top-->
     <script src="jss/plugins/pace.min.js"></script>
     <!-- Page specific javascripts-->

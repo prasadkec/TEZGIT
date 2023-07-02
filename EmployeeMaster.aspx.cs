@@ -320,7 +320,10 @@ namespace TEZBI
                 con.Close();
             }
         }
+        protected void closebutton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EmployeeMaster.aspx");
+        }
 
-       
     }
 }

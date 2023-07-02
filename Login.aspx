@@ -30,11 +30,12 @@
                                     </div>
                                     <div class="col-lg-5 col-md-12 col-sm-12 col-12 m-auto">
                                         <div class="mb-4">
-                                            <asp:TextBox ID="txtUserName" runat="server" autocomplete="off" CssClass="form-control cafe-input-grey" Placeholder="Enter Your Username" Width="100%"></asp:TextBox>
+                                            <asp:TextBox ID="txtUserName" runat="server" autocomplete="off" CssClass="form-control cafe-input-grey" Placeholder="Enter Your UserName"  Width="100%"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="Req_txtUserName" runat="server" ControlToValidate="txtUserName" CssClass="text-danger" ErrorMessage="UserName required."></asp:RequiredFieldValidator>
                                         </div>
                                         <div class="mb-4">
                                             <asp:TextBox ID="txtPassword" runat="server" autocomplete="off" CssClass="form-control cafe-input-grey" Placeholder="Enter the Password" Width="100%" TextMode="Password"></asp:TextBox>
-
+                                            <asp:RequiredFieldValidator ID="Req_txtPassword" runat="server" ControlToValidate="txtPassword" CssClass="text-danger" ErrorMessage="Password required."></asp:RequiredFieldValidator>
                                         </div>
 
                                         <asp:Button ID="LoginButton" runat="server" Text="SUBMIT" CssClass="btn btn-primary cafe-btn me-0 me-lg-3 mb-2" OnClick="LoginButton_Click" />

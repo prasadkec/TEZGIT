@@ -33,10 +33,7 @@ namespace TEZBI
             }
             try
             {
-                if (!string.IsNullOrEmpty(txtSearch.Text.Trim()))
-                {
-                    sqlcmd.Parameters.Add("@Search", SqlDbType.VarChar).Value = txtSearch.Text.Trim();
-                }
+                sqlcmd.Parameters.Add("@Search", SqlDbType.VarChar).Value = txtSearch.Text.Trim();
                 con.Open();
                 SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
                 DataSet ds = new DataSet();
@@ -216,7 +213,7 @@ namespace TEZBI
 
                 if (statusMessage.Contains("Updated Successfully"))
                 {
-                  
+
                     ScriptManager.RegisterStartupScript(this, GetType(), "showupdatecompanysuccessModal", "<script language='javascript'>showModal('updatecompanysuccess');</script>", false);
 
 
@@ -271,6 +268,16 @@ namespace TEZBI
 
                 con.Close();
             }
+        }
+
+        protected void closebutton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CompanyMaster.aspx");
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindCompanyMaster();
         }
     }
 }
